@@ -1,5 +1,6 @@
 const slides = document.querySelectorAll(".slide");
 let slideIndex = 0;
+const slideSound = document.getElementById("slideSound");
 
 document.addEventListener("DOMContentLoaded", initializeSlider);
 
@@ -10,6 +11,12 @@ function initializeSlider(){
     }
 
 }
+
+function playSound() {
+    slideSound.currentTime = 0; // Reset sound to the beginning
+    slideSound.play(); // Play the sound
+}
+
 function showSlide(index){
 
     if(index >= slides.length){
@@ -23,6 +30,7 @@ function showSlide(index){
         slide.classList.remove("displaySlide");
     });
     slides[slideIndex].classList.add("displaySlide");
+    playSound();
 }
 function prevSlide(){
     slideIndex--;
