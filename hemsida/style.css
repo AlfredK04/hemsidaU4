@@ -8,7 +8,7 @@
 .first {
     min-height: 100vh;
     background-color: #f0f0f0;
-    background-image: url('/gifs/burger.gif');
+    background-image: url('./gifs/burger.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20%;
